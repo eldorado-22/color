@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Satisfy', cursive;
+}
+
+body {
+    overflow: hidden;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 200vh;
+    background: rgba(215, 8, 8, 0.49);
+}
+
+section .box {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+}
+
+section .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #000, transparent);
+    opacity: 0.1;
+    transform: rotate(45deg);
+    transform-origin: left;
+}
+
+section .box .circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(252, 0, 0, 0.88), rgba(203, 10, 10, 0.96));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+section .box .circle:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: linear-gradient(135deg, #fff, #e7efe6);
+    border-radius: 50%;
+}
+
+section .box .circle h1 {
+    position: absolute;
+    z-index: 2;
+    font-size: 3.6em;
+    color: #ff2a2a;
+    text-align: center;
+}
+
+section .box .circle h2 {
+    position: absolute;
+    z-index: 2;
+    font-size: 6em;
+    color: #ff2a2a;
+    text-align: center;
+    padding-top: 7em;
+}
+
+section .box .circle .instagram a {
+    color: #810202;
+    transition: .6s;
+    font-size: 6em;
+    padding-right: 500px;
+}
+
+section .box .circle .instagram a:hover {
+    background: transparent;
+    transform: scale(1.1);
+    transition: .6s;
+}
+
+section .box .circle .tiktok a{
+    color: #810202;
+    transition: .6s;
+    padding-left: 500px;
+    font-size: 6em;
+
+}
+
+section .box .circle .tiktok a :hover {
+    background: transparent;
+    transform: scale(1.1);
+    transition: .6s;
+}
+
+section i {
+    position: absolute;
+    background: #ff2a2a;
+    border-radius: 100%;
+    animation: animate linear infinite;
+}
+
+section i:nth-child(even) {
+    background: transparent;
+    border: 1px solid #ff2a2a;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-2000%);
+        opacity: 0;
+    }
+}
